@@ -17,7 +17,7 @@ jobs:
         sudo git clone --depth 1 --branch android-5.1.1_r15 --single-branch https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 /opt/toolchains/arm-eabi-4.8/
     - name: Building Kernel
       run: |
-        make -j2 sp7731gea-dt_defconfig 
+        make -j2 sp7731gea-dt_defconfig MACH_BOARD=sprd-scx35_sp7731gea
         make -j64
     - name: Moving Output # CI only
       run: |

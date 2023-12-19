@@ -1,0 +1,30 @@
+name: Kernel CI (A1000)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Checkout Kernel Source
+      uses: actions/checkout@v2
+
+    - name: Getting Toolchain
+      run: |
+        sudo apt-get install lib32z1
+        sudo git clone --depth 1 --branch android-5.1.1_r15 --single-branch https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8 /opt/toolchains/arm-eabi-4.8/
+    - name: Building Kernel
+      run: |
+        make -j2 sp7731gea_hd-dt_defconfig
+        make -j64
+    - name: Moving Output # CI only
+      run: |
+        mkdir -p /home/runner/work/output
+        cp arch/arm/boot/Image /home/runner/work/output/zImage
+    - name: Uploading Output
+      uses: actions/upload-artifact@v2
+      with:
+        name: zImage
+        path: /home/runner/work/output/zImage

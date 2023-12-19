@@ -272,6 +272,16 @@ config MACH_SP7731GEA_HD
 	default n
 	help
 	SP7731GEA_HD board based on SC8830g serial.
+	
+config MACH_SP7731GEA_HD_A1000
+	bool "sp7731gea_hd_a1000 Board"
+	depends on ARCH_SC
+	depends on ARCH_SCX35
+	select CLKSRC_OF if OF
+	select COMMON_CLK if OF
+	default n
+	help
+	SP7731GEA_HD board based on SC8830g serial.
 
 config MACH_SP7731GEA_HDR
 	bool "sp7731gea_hdr Board"

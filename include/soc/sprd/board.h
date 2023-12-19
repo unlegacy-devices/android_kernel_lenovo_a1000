@@ -74,6 +74,10 @@
 #include "__board-sp7731gea_hd.h"
 #endif
 
+#ifdef	CONFIG_MACH_SP7731GEA_HD_A1000
+#include "__board-sp7731gea_hd_a1000.h"
+#endif
+
 #ifdef	CONFIG_MACH_SP7731GEA_HDR
 #include "__board-sp7731gea_hdr.h"
 #endif

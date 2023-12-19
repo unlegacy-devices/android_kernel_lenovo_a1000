@@ -233,6 +233,7 @@ dtb-$(CONFIG_MACH_SP7731GGA_LC) += sprd-scx35_sp7731gga_lc.dtb
 dtb-$(CONFIG_MACH_SP7731GEA) += sprd-scx35_sp7731gea.dtb
 dtb-$(CONFIG_MACH_SP7731GEA_HD2) += sprd-scx35_sp7731gea_hd2.dtb
 dtb-$(CONFIG_MACH_SP7731GEA_HD) += sprd-scx35_sp7731gea_hd.dtb
+dtb-$(CONFIG_MACH_SP7731GEA_HD_A1000) += sprd-scx35_sp7731gea_hd_a1000.dtb
 dtb-$(CONFIG_MACH_SP7731GEA_HDR) += sprd-scx35_sp7731gea_hdr.dtb
 dtb-$(CONFIG_MACH_SP7731GEA_QHD) += sprd-scx35_sp7731gea_qhd.dtb
 dtb-$(CONFIG_MACH_SP7731GEPIKE) += sprd-scx35_sp7731gepike.dtb
